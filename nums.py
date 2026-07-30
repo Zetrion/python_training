@@ -1,8 +1,14 @@
-n = int(input("Enter the number : "))
-l = list(map(int, input("Enter the numbers separated by space: ").split()))
-def missing_num(n,l):
-    total = n * (n + 1) // 2
-    sum_of_list = sum(l)
-    return total - sum_of_list
+n=int(input("Enter total numbers:"))
+nums=list(map(int,input(f"Enter  numbers in the list").split()))
 
-print(missing_num(n, l))
+exp_sum_sq=n*(n+1)*(2*n+1)//6
+exact_sum_sq=sum([i*i for i in nums])
+exp_sum=n*(n+1)//2
+exact_sum=sum(nums)
+difference=exp_sum-exact_sum
+sq_difference=exp_sum_sq-exact_sum_sq
+summ=sq_difference//difference
+missing=(difference+summ)//2
+duplicate=summ-missing
+print(missing)
+print(duplicate)
