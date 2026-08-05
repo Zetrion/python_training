@@ -18,8 +18,23 @@ b.prev = a
 
 
 
-while head is not None:
-    print(head.data,end="->")
-    head = head.next
-    if head is None:
-        print("None")
+# while head is not None:
+#     print(head.data,end="->")
+#     head = head.next
+#     if head is None:
+#         print("None")
+        
+for i in range(5):
+    n = int(input("Enter a number to check: "))   
+    current = head
+    found = False
+    
+    while current is not None:
+        if current.data == n:
+            found = True
+            break
+        current = current.next      
+    if found:
+        print(f"{n} is present in the linked list.")
+    else:
+        print(f"{n} is not present in the linked list.")

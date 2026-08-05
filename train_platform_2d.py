@@ -1,7 +1,7 @@
 trains = [[0,5], [1,2], [1,10], [3,4], [5,6], [7,8]]
 
-arr = [train[0] for train in trains]
-dep = [train[1] for train in trains]
+arr = sorted( [train[0] for train in trains])
+dep = sorted([train[1] for train in trains])
 
 def findPlatform(arr, dep):
     
