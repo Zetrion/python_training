@@ -6,3 +6,4 @@ for i in range(len(prices)):
         if _profit > profit:
             profit = _profit
 print(profit)
+
